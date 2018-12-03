@@ -1,4 +1,4 @@
-# iChappal_Kafka_Spark
+# iChappal Kafka Spark
 
 ## Architecture components
 1. Android App
