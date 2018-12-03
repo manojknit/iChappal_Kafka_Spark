@@ -1,8 +1,8 @@
 # iChappal_Kafka_Spark
 
 ## Db Structure
-Steps-detail - user ID, date, time, step
-Total_steps - user id, date, totalsteps
+* Steps-detail - user ID, date, time, step
+* Total_steps - user id, date, totalsteps
 
 ## Kafka Commands 
 Start
