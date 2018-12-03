@@ -31,7 +31,7 @@ if __name__ == '__main__':
     consumer.close()
 
     '''
-    client = MongoClient('mongodb://quoteuser:Monday1@ds011374.mlab.com:11374/kafkadb')
+    client = MongoClient('mongodb://quoteuser:xxx@xx.mlab.com:11374/kafkadb')
     collection = client.numtest.numtest
     
     for message in consumer:
