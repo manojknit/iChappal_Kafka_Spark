@@ -36,7 +36,9 @@ sudo nohup /opt/Kafka/kafka_2.10-0.10.0.1/bin/kafka-server-start.sh /opt/Kafka/k
 # Kafka remote enable
 **configuring server.properties**
 Uncomment and add public ip
+```
 advertised.listeners=PLAINTEXT://ec2-54-191-84-121.us-west-2.compute.amazonaws.com:9092
+```
 
 
 ## Kafka Commands 
