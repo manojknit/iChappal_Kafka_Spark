@@ -43,23 +43,33 @@ advertised.listeners=PLAINTEXT://ec2-54-191-84-121.us-west-2.compute.amazonaws.c
 
 ## Kafka Commands 
 Start
+```
 #cd /opt/Kafka/kafka_2.10-0.10.0.1/
 sudo  /opt/Kafka/kafka_2.10-0.10.0.1/bin/kafka-server-start.sh /opt/Kafka/kafka_2.10-0.10.0.1/config/server.properties
-
+```
 Stop
+```
 sudo /opt/Kafka/kafka_2.10-0.10.0.1/bin/kafka-server-stop.sh
-
+```
 Create Topic
+```
 sudo /opt/Kafka/kafka_2.10-0.10.0.1/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1  --partitions 1 --topic testing
+```
 
 Zookeeper to List Topic 
+```
 sudo /opt/Kafka/kafka_2.10-0.10.0.1/bin/kafka-topics.sh --list --zookeeper localhost:2181
+```
 
 Producer
+```
 sudo /opt/Kafka/kafka_2.10-0.10.0.1/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic testing
+```
 
 Consumer
+```
 sudo /opt/Kafka/kafka_2.10-0.10.0.1/bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic testing --from-beginning
+```
 
 Reference:
 [Kafka Server Setup](https://medium.com/@kevin.michael.horan/distributed-video-streaming-with-python-and-kafka-551de69fe1dd)<br>
