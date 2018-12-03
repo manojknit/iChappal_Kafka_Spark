@@ -9,7 +9,7 @@
 6. Alexa
 
 ## Db Structure
-* Steps-detail - user ID, date, time, step
+* Steps-detail - user ID, date, time, step, location
 * Total_steps - user id, date, totalsteps
 
 ## I have published the REST API (non-functional as of now) - 
@@ -60,6 +60,6 @@ Consumer
 sudo /opt/Kafka/kafka_2.10-0.10.0.1/bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic testing --from-beginning
 
 Reference:
-[Kafka Server Setup](https://medium.com/@kevin.michael.horan/distributed-video-streaming-with-python-and-kafka-551de69fe1dd)
-[Kafka remote enable](https://rmoff.net/2018/08/02/kafka-listeners-explained/)
-[KafkaConsumer](https://www.programcreek.com/python/example/98440/kafka.KafkaConsumer)
+[Kafka Server Setup](https://medium.com/@kevin.michael.horan/distributed-video-streaming-with-python-and-kafka-551de69fe1dd)<br>
+[Kafka remote enable](https://rmoff.net/2018/08/02/kafka-listeners-explained/)<br>
+[KafkaConsumer](https://www.programcreek.com/python/example/98440/kafka.KafkaConsumer)<br>
