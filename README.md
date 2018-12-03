@@ -78,3 +78,4 @@ sudo /opt/Kafka/kafka_2.10-0.10.0.1/bin/kafka-console-consumer.sh --zookeeper lo
 [Kafka remote enable](https://rmoff.net/2018/08/02/kafka-listeners-explained/)<br>
 [Kafka Consumer](https://www.programcreek.com/python/example/98440/kafka.KafkaConsumer)<br>
 [Kafka Python](https://github.com/dpkp/kafka-python/tree/master/kafka)
+[Kafka Java](https://github.com/apache/kafka/blob/trunk/examples/src/main/java/kafka/examples/Producer.java)
