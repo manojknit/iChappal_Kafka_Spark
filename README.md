@@ -12,12 +12,12 @@
 * Steps-detail - user ID, date, time, step, location
 * Total_steps - user id, date, totalsteps
 
-## I have published the REST API (non-functional as of now) - 
+## REST API (non-functional as of now) - 
 http://kafkapublisher-env.8tsy628pba.us-east-1.elasticbeanstalk.com/api/publish
 
 ## Kafka server setup
 Create Ubantu 16.4 EC2 M-Large Tier in AWS. 
-'''
+```
 sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo add-apt-repository -y ppa:webupd8team/java
@@ -31,7 +31,7 @@ sudo mkdir /opt/Kafka
 sudo tar -xvf kafka_2.10-0.10.0.1.tgz -C /opt/Kafka/
 sudo  /opt/Kafka/kafka_2.10-0.10.0.1/bin/kafka-server-start.sh /opt/Kafka/kafka_2.10-0.10.0.1/config/server.properties
 sudo nohup /opt/Kafka/kafka_2.10-0.10.0.1/bin/kafka-server-start.sh /opt/Kafka/kafka_2.10-0.10.0.1/config/server.properties /tmp/kafka.log 2>&1 &
-'''
+```
 
 # Kafka remote enable
 **configuring server.properties**
