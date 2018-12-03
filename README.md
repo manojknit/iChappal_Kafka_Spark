@@ -76,4 +76,5 @@ sudo /opt/Kafka/kafka_2.10-0.10.0.1/bin/kafka-console-consumer.sh --zookeeper lo
 ### Reference:<br>
 [Kafka Server Setup](https://medium.com/@kevin.michael.horan/distributed-video-streaming-with-python-and-kafka-551de69fe1dd)<br>
 [Kafka remote enable](https://rmoff.net/2018/08/02/kafka-listeners-explained/)<br>
-[KafkaConsumer](https://www.programcreek.com/python/example/98440/kafka.KafkaConsumer)<br>
+[Kafka Consumer](https://www.programcreek.com/python/example/98440/kafka.KafkaConsumer)<br>
+[Kafka Python](https://github.com/dpkp/kafka-python/tree/master/kafka)
