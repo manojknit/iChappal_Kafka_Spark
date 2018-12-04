@@ -11,7 +11,7 @@
 
 ## Db Structure
 * Step_Detail - userId, dateTime, Step
-* Total_Steps - userId, date, hour, totalSteps, totalCalories
+* Total_Steps - userId, date, hour, totalSteps, totalCalories, levels, miles
 * User_Profile - userId, gender, age, weight, height
 
 ## REST API (non-functional as of now) - 
