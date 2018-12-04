@@ -11,8 +11,8 @@
 
 ## Db Structure
 * kf-step-detail - userid, dateon, steps
-* kf-total-steps - userid, dateon, totalhours, totalcalories, levels, miles
-* user-profile - userid, gender, age, weight, height
+* kf-total-steps - userid, dateon, totalminutes, totalcalories, levels, miles
+* kf-user-profile - userid, gender, age, weight, height
 
 ## REST API (non-functional as of now) - 
 http://kafkapublisher-env.8tsy628pba.us-east-1.elasticbeanstalk.com/api/publish
