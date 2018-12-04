@@ -10,9 +10,9 @@
 7. Web interface and TensorJS Review sentiment
 
 ## Db Structure
-* Step_Detail - userId, dateTime, Step
-* Total_Steps - userId, date, hour, totalSteps, totalCalories, levels, miles
-* User_Profile - userId, gender, age, weight, height
+* kf-step-detail - userid, dateon, steps
+* kf-total-steps - userid, dateon, totalhours, totalcalories, levels, miles
+* user-profile - userid, gender, age, weight, height
 
 ## REST API (non-functional as of now) - 
 http://kafkapublisher-env.8tsy628pba.us-east-1.elasticbeanstalk.com/api/publish
