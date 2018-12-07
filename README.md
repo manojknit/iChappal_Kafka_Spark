@@ -37,7 +37,7 @@ sudo nohup /opt/Kafka/kafka_2.10-0.10.0.1/bin/kafka-server-start.sh /opt/Kafka/k
 ```
 
 # Kafka remote enable
-**configuring server.properties**
+**configuring server.properties**<br>
 Open server.properties file in edit mode
 ```
 sudo nano /opt/Kafka/kafka_2.10-0.10.0.1/config/server.properties
