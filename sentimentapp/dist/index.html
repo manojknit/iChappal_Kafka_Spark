@@ -36,8 +36,9 @@ $(document).ready(function () {
       var length = parsed.documents.length; //length=1;
 
       console.log('len=' + length);
-      var steps = parsed.documents[length - 1]['fields']['steps'].stringValue;
-      var dateon = parsed.documents[length - 1]['fields']['dateon'].timestampValue;
+      var steps = parsed.documents[0]['fields']['steps'].stringValue;
+      var dateon = parsed.documents[0]['fields']['dateon'].timestampValue;
+      dateon = new Date(dateon).toDateString();
       document.getElementById("insteps").value = steps;
       document.getElementById("indate").value = dateon;
     },
@@ -67,6 +68,7 @@ $(document).ready(function () {
         for (var i = 0; i < length; i++) {
           var miles = parseInt(parsed.documents[i]['fields']['steps'].stringValue);
           var dateon = parsed.documents[i]['fields']['dateon'].timestampValue;
+          dateon = new Date(dateon).toDateString();
           var row = [dateon, miles];
           data.push(row);
         }
