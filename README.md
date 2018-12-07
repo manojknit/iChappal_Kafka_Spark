@@ -8,6 +8,7 @@
 5. Dashboard
 6. Alexa
 7. Web interface and TensorJS Review sentiment
+8. TensorFlow Lite
 
 ## Db Structure
 * kf-step-detail - userid, dateon, steps
