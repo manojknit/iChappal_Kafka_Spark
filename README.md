@@ -85,6 +85,31 @@ sudo /opt/Kafka/kafka_2.10-0.10.0.1/bin/kafka-console-consumer.sh --zookeeper lo
 ```
 ## ScreenShots
 1. Android App
+
+User registration
+(images/register.png)
+
+(images/register2.png)
+
+User login
+(images/login.png)
+
+App Dashboard
+
+Step counter
+(images/user_dashboard_counter.png)
+
+(images/step_counter.png)
+
+User Profile
+(images/userprofile.png)
+
+User Progress
+
+(images/user_step_proegress.png)
+
+
+
 2. Firebase real time db
 ![FirebaseDb](images/FirebaseDb.png)
 3. Kafka
