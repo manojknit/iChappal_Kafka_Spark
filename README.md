@@ -87,26 +87,29 @@ sudo /opt/Kafka/kafka_2.10-0.10.0.1/bin/kafka-console-consumer.sh --zookeeper lo
 1. Android App
 
 User registration
-(images/register.png)
+!(images/register.png)
 
-(images/register2.png)
+!(images/register2.png)
 
 User login
-(images/login.png)
+
+!(images/login.png)
 
 App Dashboard
 
 Step counter
-(images/user_dashboard_counter.png)
 
-(images/step_counter.png)
+!(images/user_dashboard_counter.png)
+
+!(images/step_counter.png)
 
 User Profile
-(images/userprofile.png)
+
+!(images/userprofile.png)
 
 User Progress
 
-(images/user_step_proegress.png)
+!(images/user_step_proegress.png)
 
 
 
