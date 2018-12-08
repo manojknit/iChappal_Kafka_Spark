@@ -2,9 +2,9 @@
 
 ## Introduction
 * A pedometer app which measures the no. of steps taken by a user
- - Sensor used: Accelerator
+  - Sensor used: Accelerator
 * Predicting the Calorie expense using Spark ML
- - Consider Profile features like age, weight, height, gender etc
+  - Consider Profile features like age, weight, height, gender etc
 * Real time feed to Mobile App using Firebase
 
 
