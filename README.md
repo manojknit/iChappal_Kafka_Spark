@@ -88,7 +88,7 @@ sudo /opt/Kafka/kafka_2.10-0.10.0.1/bin/kafka-console-consumer.sh --zookeeper lo
 
 User registration
 
-<img src="https://github.com/manojknit/iChappal_Kafka_Spark/blob/master/images/register.png" width="250" height="250>
+<img src="https://github.com/manojknit/iChappal_Kafka_Spark/blob/master/images/register.png" width="250" height="250">
 
 
 ![register2](images/register2.png)
