@@ -87,7 +87,9 @@ sudo /opt/Kafka/kafka_2.10-0.10.0.1/bin/kafka-console-consumer.sh --zookeeper lo
 1. Android App
 
 User registration
-!(images/register.png)
+
+<img src="https://github.com/manojknit/iChappal_Kafka_Spark/blob/master/images/register.png" width="250" height="250>
+
 
 ![register2](images/register2.png)
 
