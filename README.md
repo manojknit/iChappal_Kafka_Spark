@@ -10,6 +10,8 @@
 7. Web interface and TensorJS Review sentiment
 8. TensorFlow Lite
 
+![Architecture Diagram](images/ArchitectureDiagram.png)
+
 ## Db Structure
 * kf-step-detail - userid, dateon, steps
 * kf-total-steps - userid, dateon, totalminutes, totalcalories, levels, miles
