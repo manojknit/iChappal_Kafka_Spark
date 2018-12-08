@@ -6,7 +6,8 @@
 * Predicting the Calorie expense using Spark ML
   - Consider Profile features like age, weight, height, gender etc
 * Real time feed to Mobile App using Firebase
-
+* Predicting the Feedback rating using TensorFlow.JS
+* Predicting the flower name using TensorFlow LITE
 
 ## Architecture components
 1. Android App
