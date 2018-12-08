@@ -4,14 +4,111 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:padding="10dp"
-        android:textSize="40sp"
-        android:text="hello1 world3"
-        android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/frag_miles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Miles covered"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:id="@+id/milesval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            />
+        <TextView
+            android:id="@+id/frag_calories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total calories burnt"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:id="@+id/caloriesval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+
+            />
+
+
+        <TextView
+            android:id="@+id/frag_minutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total minutes"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:id="@+id/minutesval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            />
+        <TextView
+            android:id="@+id/frag_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Levels"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:id="@+id/levelval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            />
+        <TextView
+            android:id="@+id/frag_totsteps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total steps"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:id="@+id/totstepsval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            />
+
+
+
+
 
 </LinearLayout>

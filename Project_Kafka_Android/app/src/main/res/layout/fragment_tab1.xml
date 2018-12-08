@@ -1,32 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 android:orientation="vertical"
-android:gravity="center"
+android:gravity="center_horizontal"
 android:layout_width="match_parent"
 android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:text="Hey Welcome! Start counting your steps! Stay fit and healthy!!!"
+        />
 
 
 
-<TextView
-    android:id="@+id/tv_steps"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center"
-    />
 
 
 <Button
     android:id="@+id/btn_start"
-    android:layout_width="match_parent"
+    android:layout_marginTop="30dp"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Start Pedometer"
+    android:background="@color/bg_login"
+    android:text="Start"
+    android:layout_marginBottom="20dp"
     />
 
-<Button
+    <TextView
+        android:id="@+id/tv_steps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        />
+
+
+    <Button
     android:id="@+id/btn_stop"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Stop Pedometer"
+    android:background="@color/btn_logut_bg"
+    android:text="Stop"
+    android:layout_marginTop="20dp"
     />
 
 </LinearLayout>
