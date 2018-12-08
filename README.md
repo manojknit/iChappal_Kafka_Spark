@@ -83,6 +83,7 @@ Consumer
 ```
 sudo /opt/Kafka/kafka_2.10-0.10.0.1/bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic testing --from-beginning
 ```
+
 ## ScreenShots
 1. Android App
 
@@ -121,16 +122,22 @@ User Progress
 
 2. Firebase real time db
 ![FirebaseDb](images/FirebaseDb.png)
+
 3. Kafka
 ![Kafka](images/Kafka.png)
-4. Spark Stream
-5. Dashboard
-6. Alexa
-7. Web interface and TensorJS Review sentiment
-![WebApp](images/WebApp.png)
-8. TensorFlow Lite
 
-![Architecture Diagram](images/ArchitectureDiagram.png)
+4. Spark Stream
+![model_train1](images/model_train1.png)
+![model_train2](images/model_train2.png)
+ 
+5. Alexa
+![AlexaSkillLambda](images/AlexaSkillLambda.png)
+
+6. Web interface, Dashboard, and TensorJS Review sentiment
+![WebApp](images/WebApp.png)
+
+7. TensorFlow Lite
+![TensorFlowLite](images/TensorFlowLite.png)
 
 ### Reference:<br>
 [Kafka Server Setup](https://medium.com/@kevin.michael.horan/distributed-video-streaming-with-python-and-kafka-551de69fe1dd)<br>
