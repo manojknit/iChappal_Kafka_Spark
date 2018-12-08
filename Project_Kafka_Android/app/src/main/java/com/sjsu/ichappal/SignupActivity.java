@@ -132,7 +132,7 @@ public class SignupActivity extends AppCompatActivity {
                                             Toast.LENGTH_SHORT).show();
                                 } else {
                                     // Create a new user with a first, middle, and last name
-                                   //UserProfile userProfile = new UserProfile(username, userid, String age, String gender, String height, String weight )
+                                    //UserProfile userProfile = new UserProfile(username, userid, String age, String gender, String height, String weight )
 
                                     Map<String, Object> user = new HashMap<>();
                                     user.put("Name", username);

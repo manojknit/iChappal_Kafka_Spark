@@ -22,7 +22,8 @@ public class MainActivity extends AppCompatActivity {
         private TabLayout tabLayout;
         private ViewPager viewPager;
         private FirebaseAuth auth;
-
+        private FirebaseUser user;
+        private FirebaseAuth.AuthStateListener authListener;
         @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,11 +32,30 @@ public class MainActivity extends AppCompatActivity {
             setSupportActionBar(toolbar);
 
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            //get firebase auth instance
+            auth = FirebaseAuth.getInstance();
+
+            //get current user
+            final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+            String useremail = user.getEmail();
+            Log.d("user email", useremail);
+            authListener = new FirebaseAuth.AuthStateListener() {
+                @Override
+                public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                    FirebaseUser user = firebaseAuth.getCurrentUser();
+                    if (user == null) {
+                        // user auth state is changed - user is null
+                        // launch login activity
+                        startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                        finish();
+                    }
+                }
+            };
 
             TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
-            tabLayout.addTab(tabLayout.newTab().setText("Tab 1"));
-            tabLayout.addTab(tabLayout.newTab().setText("Tab 2"));
-            tabLayout.addTab(tabLayout.newTab().setText("Tab 3"));
+            tabLayout.addTab(tabLayout.newTab().setText("Track"));
+            tabLayout.addTab(tabLayout.newTab().setText("Profile"));
+            tabLayout.addTab(tabLayout.newTab().setText("History"));
             tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
             final ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
@@ -70,29 +90,34 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            Log.d("settings","Settings clciked");
-            auth = FirebaseAuth.getInstance();
-
+        if (id == R.id.action_signout) {
+            Log.d("Sign out","Sign out Clicked");
+            //user = FirebaseAuth.getInstance().getCurrentUser();
+            signOut();
 
 // this listener will be called when there is change in firebase user session
-            FirebaseAuth.AuthStateListener authListener = new FirebaseAuth.AuthStateListener() {
-                @Override
-                public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                    FirebaseUser user = firebaseAuth.getCurrentUser();
-                    if (user == null) {
-                        // user auth state is changed - user is null
-                        // launch login activity
-                        auth.signOut();
-                        Log.d("user null","log out ");
-                        startActivity(new Intent(MainActivity.this, LoginActivity.class));
-                        finish();
 
-                    }
-                }
-            };
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    //sign out method
+    public void signOut() {
+        auth.signOut();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        auth.addAuthStateListener(authListener);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (authListener != null) {
+            auth.removeAuthStateListener(authListener);
+        }
     }
 }

@@ -2,8 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.sjsu.ichappal.Dashboard">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_signout"
         android:orderInCategory="100"
         android:showAsAction="never"
-        android:title="@string/action_settings" />
+        android:title="@string/btn_sign_out" />
 </menu>

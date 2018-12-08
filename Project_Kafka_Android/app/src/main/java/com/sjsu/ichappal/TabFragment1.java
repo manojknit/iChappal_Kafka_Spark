@@ -28,15 +28,18 @@ import com.sjsu.ichappal.helpers.StepListener;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
+import android.os.*;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.sql.Timestamp;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class TabFragment1 extends Fragment implements SensorEventListener, StepListener {
@@ -108,11 +111,18 @@ public class TabFragment1 extends Fragment implements SensorEventListener, StepL
         if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
             simpleStepDetector.updateAccel(
                     event.timestamp, event.values[0], event.values[1], event.values[2]);
+            long timeInMillis = (new java.util.Date()).getTime()
+                    + (event.timestamp - System.nanoTime()) / 1000000L;
+          //  Timestamp TM =  new Timestamp(event.timestamp);
+           // String timeStamp = new java.text.SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new java.util.Date());
+            java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("yyyy-MM-dd hh:MM:ss");
+            java.util.Date df = new java.util.Date(timeInMillis);
+           // sdf.format(df);
           /*  Map<String, Object> accel_data = new HashMap<>();
             accel_data.put("X",  event.values[0]);
             accel_data.put("Y", event.values[1]);
             accel_data.put("Z", event.values[2]);
-            accel_data.put("timestamp", event.timestamp);
+            accel_data.put("timestamp", sdf.format(df));
 
             db.collection("accelerometerdata")
                     .add(accel_data)
@@ -134,20 +144,43 @@ public class TabFragment1 extends Fragment implements SensorEventListener, StepL
     @Override
     public void step(long timeNs) throws JSONException {
         numSteps++;
+       // callAsynchronousTask();
         new HTTPAsyncTask().execute("http://kafkapublisher-env.8tsy628pba.us-east-1.elasticbeanstalk.com/api/publish");
         TvSteps.setText(TEXT_NUM_STEPS + numSteps);
     }
 
+    public void callAsynchronousTask() {
+        final Handler handler = new Handler();
+        Timer timer = new Timer();
+        TimerTask doAsynchronousTask = new TimerTask() {
+            @Override
+            public void run() {
+                handler.post(new Runnable() {
+                    public void run() {
+                        try {
+                            new HTTPAsyncTask().execute("http://kafkapublisher-env.8tsy628pba.us-east-1.elasticbeanstalk.com/api/publish");
+
+                        } catch (Exception e) {
+                            // TODO Auto-generated catch block
+                            Log.d("Asynctask","Error sending post request");
+                        }
+                    }
+                });
+            }
+        };
+        timer.schedule(doAsynchronousTask, 0, 3000); //execute in every 50000 ms
+    }
     @Override
     public void onAccuracyChanged(Sensor sensor, int i) {
 
     }
 
     private JSONObject buidJsonObject(int numSteps) throws JSONException {
-        String timeStamp = new java.text.SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new java.util.Date());
+        String timeStamp = new java.text.SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
+       // java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("yyyy-MM-dd hh:MM:ss");
         JSONObject jsonObject = new JSONObject();
         jsonObject.accumulate("userId", auth.getCurrentUser().getEmail());
-        jsonObject.accumulate("dateTime", timeStamp );
+        jsonObject.accumulate("dateTime", "1234564243" );
         jsonObject.accumulate("step", numSteps );
 
         return jsonObject;
@@ -171,7 +204,7 @@ public class TabFragment1 extends Fragment implements SensorEventListener, StepL
 
         // 4. make POST request to the given URL
         conn.connect();
-
+        Log.d("Post response message",conn.getResponseMessage());
         // 5. return response message
         return conn.getResponseMessage()+"";
 
