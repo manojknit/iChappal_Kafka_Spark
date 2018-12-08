@@ -1,4 +1,12 @@
-# iChappal Kafka Spark
+# iChappal Kafka Spark - An AI powered Fitness App
+
+## Introduction
+* A pedometer app which measures the no. of steps taken by a user
+ - Sensor used: Accelerator
+* Predicting the Calorie expense using Spark ML
+ - Consider Profile features like age, weight, height, gender etc
+* Real time feed to Mobile App using Firebase
+
 
 ## Architecture components
 1. Android App
