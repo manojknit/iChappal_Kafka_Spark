@@ -88,31 +88,35 @@ sudo /opt/Kafka/kafka_2.10-0.10.0.1/bin/kafka-console-consumer.sh --zookeeper lo
 
 User registration
 
-<img src="https://github.com/manojknit/iChappal_Kafka_Spark/blob/master/images/register.png" width="250" height="250">
+<img src="https://github.com/manojknit/iChappal_Kafka_Spark/blob/master/images/register.png" width="350" height="400">
 
+<img src="https://github.com/manojknit/iChappal_Kafka_Spark/blob/master/images/register2.png" width="350" height="400">
 
-![register2](images/register2.png)
 
 User login
 
-!(images/login.png)
+
+<img src="https://github.com/manojknit/iChappal_Kafka_Spark/blob/master/images/login.png" width="350" height="400">
+
 
 App Dashboard
 
 Step counter
 
-!(images/user_dashboard_counter.png)
+<img src="https://github.com/manojknit/iChappal_Kafka_Spark/blob/master/images/user_dashboard_counter.png" width="350" height="400">
 
-!(images/step_counter.png)
+<img src="https://github.com/manojknit/iChappal_Kafka_Spark/blob/master/images/step_counter.png" width="350" height="400">
+
 
 User Profile
 
-!(images/userprofile.png)
+
+<img src="https://github.com/manojknit/iChappal_Kafka_Spark/blob/master/images/userprofile.png" width="350" height="400">
 
 User Progress
 
-!(images/user_step_proegress.png)
 
+<img src="https://github.com/manojknit/iChappal_Kafka_Spark/blob/master/images/user_step_proegress.png" width="350" height="400">
 
 
 2. Firebase real time db
