@@ -89,7 +89,7 @@ sudo /opt/Kafka/kafka_2.10-0.10.0.1/bin/kafka-console-consumer.sh --zookeeper lo
 User registration
 !(images/register.png)
 
-!(images/register2.png)
+![register2](images/register2.png)
 
 User login
 
